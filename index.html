@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3TMRI</title>
     <link rel="stylesheet" href="./assets/css/output.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <header class="absolute w-screen top-14">
+    <header class="absolute w-screen top-14 z-[9999]">
       <nav
         class="navbar container mx-auto bg-transparent flex justify-between items-center"
       >
@@ -49,6 +54,7 @@
       </nav>
     </header>
 
+    <!-- Hero Banner -->
     <section
       class="banner relative overflow-hidden left-0 flex justify-center items-center h-screen w-screen"
     >
@@ -108,7 +114,8 @@
       </div>
     </section>
 
-    <section class="services my-[50px] md:my-[100px]">
+    <!-- About Us -->
+    <section class="aboutUs my-[50px] md:my-[100px]">
       <div class="container mx-auto">
         <div class="top gap-36 mb-14 flex justify-between items-center">
           <h3 class="h3 capitalize w-2/4 font-bold">
@@ -203,6 +210,7 @@
       </div>
     </section>
 
+    <!-- What We Do -->
     <section class="whatWeDo py-[100px]">
       <div
         class="container mx-auto flex gap-[80px] justify-between items-center"
@@ -271,13 +279,19 @@
         </div>
       </div>
     </section>
+
+    <!-- Marquee -->
     <section class="marqueeContainer my-[100px] relative">
-      <div class="container mx-auto flex justify-center items-center relative z-30">
-        <img
-          src="./assets/images/mriMarquee.png"
-          alt="Marquee MRI"
-          class="max-w-[880px]"
-        />
+      <div
+        class="container mx-auto flex justify-center items-center relative z-30"
+      >
+        <div class="mriMarquee">
+          <img
+            src="./assets/images/mriMarquee.png"
+            alt="Marquee MRI"
+            class="max-w-[880px]"
+          />
+        </div>
       </div>
       <div class="marquee">
         <ul class="marquee-list1">
@@ -311,7 +325,402 @@
       </div>
     </section>
 
+    <!-- Facilities Carousel -->
+    <section class="carousel relative" id="facilitySection">
+      <div class="container mx-auto mb-10">
+        <div class="header">
+          <h3 class="h3 capitalize font-bold">
+            What can we detect <span class="block"></span> through our 3T MRI
+            Scan
+          </h3>
+        </div>
+      </div>
+      <div class="swiperContainer relative">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-12">
+            <div
+            class="slide-main slide-1 flex flex-col p-10 items-start justify-center col-span-4"
+          >
+            <img
+              src="./assets/images/logos/logoIcon.svg"
+              alt="Logo Icon"
+              class="w-16 h-16"
+            />
+            <h4 class="h4 capitalize text-left font-bold leading-[1.2] my-4">
+              With our 3T MRI scan, we ensure to provide the best.
+            </h4>
+            <p class="p text-left font-normal tracking-normal leading-[1.8]">
+              Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
+              sodales dictum turpis non vitae fames. Eu convallis venenatis
+              faucibus lectus cursus commodo. At ante dignissim ad congue duis
+              massa.
+            </p>
+  
+            <button class="btn btn-primary capitalize mt-10">
+              <img
+                src="./assets/images/icons/calendar.svg"
+                alt="calendar"
+                class="mr-5"
+              />
+              <span>Schedule an Appointment now!</span>
+            </button>
+          </div>
+          </div>
+        </div> 
+        <div class="facility-right absolute right-0 top-0 w-full h-full">
+          <div class="facility-swiper-div">
+            <div class="swiper card-swiper">
+              <div class="swiper-wrapper">
+                <!-- swiper slides -->
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#AEE2FF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">01</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                    />
+                    <h5 class="h4 font-bold capitalize">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#EBEED7]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">02</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize">
+                      Brain, Spinal Cord Disorders and Tumors
+                    </h5>
+                  </div>
+                </div>
+    
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#BCECCF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">03</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel2.jpg"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+    
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#AEE2FF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">04</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="btn-grp container mx-auto">
+                <div class="swiper-button-next rotate-180">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+                <div class="swiper-button-prev">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>          
+          </div>
+        
+        </div>             
+        </div>             
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial my-[100px]">
+      <img
+        src="./assets/images/mriBanner.jpg"
+        alt="MRI Banner Image"
+        class="w-full h-full"
+      />
+      <div class="container mx-auto py-16">
+        <div class="col-span-12">
+          <div class="container mx-auto mb-[-50px]">
+            <div class="header">
+              <h5 class="h5 capitalize font-bold text-white">
+                What People Say About Us
+              </h5>
+            </div>
+          </div>
+          <div class="swiperContainer container mx-auto">
+            <div class="swiper testi-swiper">
+              <div class="swiper-wrapper flex relative">
+                <!-- swiper slides -->
+
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize text-white w-[70%]">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize text-white w-[70%]">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize text-white w-[70%]">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize text-white w-[70%]">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination !text-white"></div>
+              <!-- Add Arrows -->
+              <div class="btn-grp container mx-auto">
+                <div class="swiper-button-next rotate-180">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+                <div class="swiper-button-prev">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="service my-[100px]">
+      <div class="container mx-auto">
+          <h3 class="h3 capitalize mb-14 text-center font-bold">
+            Where we provide
+            <span class="animated-line">3T MRI service</span> in California
+          </h3>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-6">
+            <div class="card">
+              <div class="card-body flex flex-col justify-center items-center">
+                <h3 class="h3 font-bold text-center">Culver City, CA</h3>
+                <p class="mt-4 font-normal text-center w-3/4">
+                  9832 Venice Blvd., Culver City, CA 90232, United States
+                </p>
+                <button class="btn btn-primary capitalize mt-12">
+                  <img src="./assets/images/icons/map_cards.svg" alt="map cards" class="mr-3" />
+                  <span>View Location on Map</span>
+                </button>
+              </div>
+              <div class="img-container">
+                <img src="./assets/images/card-1.png" alt="MRi Machine" class="card-img"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-6">
+            <div class="card">
+              <div class="card-body flex flex-col justify-center items-center">
+                <h3 class="h3 font-bold text-center">Culver City, CA</h3>
+                <p class="mt-4 font-normal text-center w-3/4">
+                  9832 Venice Blvd., Culver City, CA 90232, United States
+                </p>
+                <button class="btn btn-primary capitalize mt-12">
+                  <img src="./assets/images/icons/map_cards.svg" alt="map cards" class="mr-3" />
+                  <span>View Location on Map</span>
+                </button>
+              </div>
+              <div class="img-container">
+                <img src="./assets/images/card.png" alt="MRi Machine" class="card-img"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Js -->
-    <script src="./assets/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>

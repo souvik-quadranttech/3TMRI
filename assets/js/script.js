@@ -45,7 +45,6 @@ document.querySelectorAll(".number").forEach((client) => {
   observer.observe(client);
 });
 
-
 // nav on scroll background
 document.addEventListener("DOMContentLoaded", function () {
   let scrollpos = window.scrollY;
@@ -65,3 +64,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// carousel
+const swiper = new Swiper(".card-swiper", {
+  slidesPerView: 1.5,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+  },
+});
+
+// testimonial_swiper
+const testi_swiper = new Swiper(".testi-swiper", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+});
+
+// Facility Section
+
+let facilitySection = document.querySelector("#facilitySection");
+if (facilitySection) {
+  let slideMain = facilitySection.querySelector(".slide-main");
+  let rightPos = slideMain.getBoundingClientRect().right;
+  let swiperDiv = facilitySection.querySelector(".facility-swiper-div");
+  swiperDiv.style.marginLeft = `${Number(rightPos.toFixed()) + 40}px`;
+  console.log(rightPos);
+}
