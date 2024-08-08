@@ -5,7 +5,7 @@
     --secodary-text-color: #62BDFF;
     --light-text-color: rgb(255, 255, 255);
     --primary-border-color: #033D5A;
-    --secondary-border-color: #033D5A80;
+    --secondary-border-color: #033d5a1f;
     --light-border-color: rgb(255, 255, 255);
 
     --h2: 110px;
@@ -427,16 +427,16 @@ header.bg-light {
 }
 
 .marquee ul.marquee-list1 {
-    animation: menuList 40s linear infinite;
+    animation: menuList 60s linear infinite;
 }
 
 .marquee ul.marquee-list2 {
-    animation: menuList2 40s linear infinite;
+    animation: menuList2 60s linear infinite;
 }
 
 @keyframes menuList {
     0% {
-        transform: translateX(-165%);
+        transform: translateX(-145%);
     }
 
     100% {
@@ -697,8 +697,8 @@ header.bg-light {
     border-radius: 32px;
 }
 
-.service .col-span-6:nth-child(2) .card {
-    background-color: #EBEED7;
+.service .card-cont-2 .card {
+    background-color: #EBEED7 !important;
 }
 
 .service .fullService .card {
@@ -1061,10 +1061,6 @@ header.bg-light {
         height: 400px;
     }
 
-    .service .col-span-12:nth-child(2) .card {
-        background-color: #EBEED7;
-    }
-
     .service .card .img-container {
         height: 300px;
     }
@@ -1106,7 +1102,7 @@ header.bg-light {
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 430px) {
     :root {
         --h2: 50px;
         --h3: 24px;
@@ -1130,6 +1126,10 @@ header.bg-light {
     .star-icons img {
         width: 16px;
         height: 16px;
+    }
+
+    #facilitySection .container:not(.swiperContainer .container) {
+        padding-top: 0;
     }
 
     .testimonial .swiperContainer .swiper-slide {
@@ -1192,7 +1192,16 @@ header.bg-light {
         transform: translateY(60px);
     }
 
-    .btn-grp{
+    .swiper .btn-grp {
         display: none;
+    }
+
+    .googleReviews {
+        background-color: var(--light-text-color);
+        padding: 10px 24px;
+    }
+
+    .googleReviews p {
+        text-wrap: nowrap;
     }
 }
