@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3TMRI</title>
     <link rel="stylesheet" href="./assets/css/output.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <header class="absolute w-screen top-14">
+    <header class="absolute w-full lg:w-screen 2xl:top-14 md:top-10 top-5 z-[9999]">
       <nav
         class="navbar container mx-auto bg-transparent flex justify-between items-center"
       >
@@ -32,7 +37,9 @@
                 src="./assets/images/icons/call.svg"
                 alt="Call Icon"
               />
-              (877) 674-8888
+              <span class="animated-underline-light">
+                (877) 674-8888
+              </span>
             </a>
           </li>
           <li class="nav-list">
@@ -42,15 +49,16 @@
                 alt="calendar pic"
                 class="icon mr-3"
               />
-              Schedule an MRI
+              <span>Schedule an MRI</span>
             </button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <section
-      class="banner relative overflow-hidden left-0 flex justify-center items-center h-screen w-screen"
+    <!-- Hero Banner -->
+    <section id="hero"
+      class="banner relative overflow-hidden left-0 flex justify-center items-center xl:h-screen h-full w-full lg:w-screen"
     >
       <img
         src="./assets/images/bannerBg.jpg"
@@ -58,9 +66,9 @@
         alt="banner"
       />
       <div
-        class="container mt-[114px] mx-auto flex justify-between items-center z-[1]"
+        class="container xl:mt-[114px] md:mt-[200px] mt-[120px] mx-auto flex justify-between items-center z-[1] xl:flex-row flex-col"
       >
-        <div class="left w-2/4 flex flex-col justify-center items-start">
+        <div class="left w-full xl:w-2/4 flex flex-col justify-center items-start md:gap-5 gap-2">
           <div class="top flex gap-2">
             <img
               src="./assets/images/icons/location.svg"
@@ -74,7 +82,7 @@
               New High-Resolution 3T MRI Facility
             </h2>
           </div>
-          <div class="bottom flex items-center">
+          <div class="bottom flex items-center gap-4">
             <div class="googleReviews bg-white rounded-full flex items-center">
               <img
                 src="./assets/images/icons/google.svg"
@@ -94,28 +102,29 @@
             <img
               src="./assets/images/gold-seal.png"
               alt="Gold Seal"
-              class="ml-14 h-[123px] w-[123px]"
+              class="md:ml-14 ml-0 h-[80px] w-[80px] md:h-[123px] md:w-[123px]"
             />
           </div>
         </div>
-        <div class="right w-2/4">
+        <div class="right xl:w-2/4 w-full md:mb-[-200px] mb-[-100px] xl:mb-0 flex sm:justify-center xl:justify-normal mt-6 xl:mt-0">
           <img
             src="./assets/images/bannerMri.png"
             alt="MRI machine"
-            class="absolute bottom-[-35%]"
+            class="xl:absolute xl:bottom-[-35%] bannerMri"
           />
         </div>
       </div>
     </section>
 
-    <section class="services my-[50px] md:my-[100px]">
+    <!-- About Us -->
+    <section class="aboutUs my-[50px] xl:my-[100px]">
       <div class="container mx-auto">
-        <div class="top gap-36 mb-14 flex justify-between items-center">
-          <h3 class="h3 capitalize w-2/4 font-bold">
+        <div class="top lg:gap-36 gap-4 flex-col lg:flex-row md:mb-14 mb-7 flex justify-between items-center">
+          <h3 class="h3 capitalize lg:w-2/4 w-full font-bold">
             A premier imaging facility provider in
             <span class="animated-line">California</span>
           </h3>
-          <p class="p w-2/4 font-normal leading-7">
+          <p class="p lg:w-2/4 w-full font-normal leading-7">
             Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
             sodales dictum turpis non vitae fames. Eu convallis venenatis
             faucibus lectus cursus commodo. At ante dignissim ad congue duis
@@ -124,8 +133,8 @@
             magnis.
           </p>
         </div>
-        <div class="middle grid grid-cols-3 gap-6">
-          <div class="card">
+        <div class="middle lg:grid lg:grid-cols-3 flex flex-wrap gap-6">
+          <div class="card flex-1">
             <div class="card-image">
               <img
                 src="./assets/images/icons/task.svg"
@@ -161,7 +170,7 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <div class="card flex-1">
             <div class="card-image">
               <img
                 src="./assets/images/icons/notes.svg"
@@ -180,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="bottom grid grid-cols-3 mt-[100px]">
+        <div class="bottom md:grid md:grid-cols-3 md:mt-[100px] mt-[50px] flex gap-6 flex-col">
           <div class="count">
             <h2 class="h2 font-bold leading-[1.2]">
               <span class="number" data-value="173"></span>k+
@@ -203,23 +212,24 @@
       </div>
     </section>
 
-    <section class="whatWeDo py-[100px]">
+    <!-- What We Do -->
+    <section class="whatWeDo py-12 lg:py-[100px]">
       <div
-        class="container mx-auto flex gap-[80px] justify-between items-center"
+        class="container mx-auto gap-[40px] lg:gap-[80px] flex flex-col md:flex-row justify-between items-center"
       >
-        <div class="left w-2/4">
+        <div class="left lg:w-2/4 w-full">
           <img
             src="./assets/images/ladyMri.jpg"
             alt="Lady With MRI"
-            class="rounded-[40px]"
+            class="rounded-[40px] md:max-h-full max-h-[400px]"
           />
         </div>
-        <div class="right w-2/4">
-          <h2 class="capitalize text-white font-bold leading-[1.2]">
+        <div class="right lg:w-2/4 w-full">
+          <h2 class="capitalize text-white font-bold leading-[1.2] lg:mb-0 mb-4">
             <span class="inline-block light_text">ExpertMRI</span>, <br />
             Your <span class="animated-line">Imaging</span> Partner
           </h2>
-          <p class="font-normal mb-16 text-white leading-[1.8] p">
+          <p class="font-normal lg:mb-16 mb-8 text-white leading-[1.8] p">
             Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
             sodales dictum turpis non vitae fames. Eu convallis venenatis
             faucibus lectus cursus commodo. At ante dignissim ad congue duis
@@ -271,13 +281,19 @@
         </div>
       </div>
     </section>
-    <section class="marqueeContainer my-[100px] relative">
-      <div class="container mx-auto flex justify-center items-center relative z-30">
-        <img
-          src="./assets/images/mriMarquee.png"
-          alt="Marquee MRI"
-          class="max-w-[880px]"
-        />
+
+    <!-- Marquee -->
+    <section class="marqueeContainer xl:my-[100px] my-[50px] relative">
+      <div
+        class="container mx-auto flex justify-center items-center relative z-30"
+      >
+        <div class="mriMarquee">
+          <img
+            src="./assets/images/mriMarquee.png"
+            alt="Marquee MRI"
+            class="mriMarquee_image"
+          />
+        </div>
       </div>
       <div class="marquee">
         <ul class="marquee-list1">
@@ -311,7 +327,522 @@
       </div>
     </section>
 
+    <!-- Facilities Carousel -->
+    <section class="carousel relative" id="facilitySection">
+      <div class="container mx-auto mb-10">
+        <div class="header">
+          <h3 class="h3 capitalize font-bold">
+            What can we detect <span class="block"></span> through our 3T MRI
+            Scan
+          </h3>
+        </div>
+      </div>
+      <div class="swiperContainer relative">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-12">
+            <div
+            class="slide-main slide-1 flex flex-col p-5 lg:p-10 items-start justify-center col-span-12 xl:col-span-5"
+          >
+            <img
+              src="./assets/images/logos/logoIcon.svg"
+              alt="Logo Icon"
+              class="w-16 h-16"
+            />
+            <h4 class="h4 capitalize text-left font-bold leading-[1.2] my-4">
+              With our 3T MRI scan, we ensure to provide the best.
+            </h4>
+            <p class="p text-left font-normal tracking-normal leading-[1.8]">
+              Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
+              sodales dictum turpis non vitae fames. Eu convallis venenatis
+              faucibus lectus cursus commodo. At ante dignissim ad congue duis
+              massa.
+            </p>
+  
+            <button class="btn btn-primary capitalize mt-10">
+              <img
+                src="./assets/images/icons/calendar.svg"
+                alt="calendar"
+                class="md:mr-5 mr-2"
+              />
+              <span class="text-nowrap">Schedule an Appointment now!</span>
+            </button>
+          </div>
+          </div>
+        </div> 
+        <div class="facility-right relative px-5 pt-10 xl:pt-0 xl:px-0 xl:absolute xl:right-0 xl:top-0 w-full h-full">
+          <div class="facility-swiper-div">
+            <div class="swiper card-swiper">
+              <div class="swiper-wrapper">
+                <!-- swiper slides -->
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#AEE2FF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">01</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                    />
+                    <h5 class="h4 font-bold capitalize text-left">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#EBEED7]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">02</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize text-left">
+                      Brain, Spinal Cord Disorders and Tumors
+                    </h5>
+                  </div>
+                </div>
+    
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#BCECCF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">03</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel2.jpg"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize text-left">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+    
+                <div class="swiper-slide">
+                  <div class="facility-slide bg-[#AEE2FF]">
+                    <div class="card-number-container">
+                      <h5 class="card-no">04</h5>
+                    </div>
+                    <img
+                      src="./assets/images/carousel1.png"
+                      alt="Carousel Image"
+                      class="carousel-image"
+                      wd
+                    />
+                    <h5 class="h4 font-bold capitalize text-left">
+                      Abdominal and Pelvic Disorders
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="btn-grp container mx-auto">
+                <div class="swiper-button-next rotate-180">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+                <div class="swiper-button-prev">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>          
+          </div>
+        
+        </div>             
+        </div>             
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial xl:my-[100px] my-[50px]">
+      <img
+        src="./assets/images/mriBanner.jpg"
+        alt="MRI Banner Image"
+        class="w-full h-full"
+      />
+      <div class="container mx-auto lg:!py-16 !py-0">
+        <div class="col-span-12 mt-8 md:py-0 py-8 2xl:mt-0">
+          <div class="container mx-auto mb-[-50px]">
+            <div class="header">
+              <h5 class="h5 capitalize font-bold text-white">
+                What People Say About Us
+              </h5>
+            </div>
+          </div>
+          <div class="swiperContainer container mx-auto">
+            <div class="swiper testi-swiper">
+              <div class="swiper-wrapper flex relative">
+                <!-- swiper slides -->
+
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <h4 class="h4 capitalize font-bold text-white">
+                    Amazing experience!
+                  </h4>
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
+                    Amazing experience! Patrice was so sweet and knowledgeable.
+                    She really went the extra mile. Dr. Farukhi read my images
+                    and made sure to follow up with me to address any concerns
+                    or questions I had. The front office is very welcoming!
+                  </h4>
+                  <div class="review">
+                    <div class="star-icons flex gap-4">
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                      <img
+                        src="./assets/images/icons/Star.svg"
+                        alt="Star"
+                        class="w-6"
+                      />
+                    </div>
+                    <h5 class="text-white mt-3">Khizer K.</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination !text-white"></div>
+              <!-- Add Arrows -->
+              <div class="btn-grp container mx-auto">
+                <div class="swiper-button-next rotate-180">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+                <div class="swiper-button-prev">
+                  <img
+                    src="./assets/images/icons/arrow.svg"
+                    class="arrowSvg"
+                    alt="Left Arrow"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="service md:mt-[100px] mt-[50px]">
+      <div class="container mx-auto">
+          <h3 class="h3 capitalize mb-14 text-center font-bold">
+            Where we provide
+            <span class="animated-line">3T MRI service</span> in California
+          </h3>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="md:col-span-6 col-span-12 card-cont-1">
+            <div class="card">
+              <div class="card-body flex flex-col justify-center items-center">
+                <h3 class="h3 font-bold text-center">Culver City, CA</h3>
+                <p class="mt-4 font-normal text-center w-3/4">
+                  9832 Venice Blvd., Culver City, CA 90232, United States
+                </p>
+                <button class="btn btn-primary capitalize mt-12">
+                  <img src="./assets/images/icons/map_cards.svg" alt="map cards" class="mr-3" />
+                  <span>View Location on Map</span>
+                </button>
+              </div>
+              <div class="img-container">
+                <img src="./assets/images/card-1.png" alt="MRi Machine" class="card-img"/>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-6 col-span-12 card-cont-2">
+            <div class="card">
+              <div class="card-body flex flex-col justify-center items-center">
+                <h3 class="h3 font-bold text-center">Culver City, CA</h3>
+                <p class="mt-4 font-normal text-center w-3/4">
+                  9832 Venice Blvd., Culver City, CA 90232, United States
+                </p>
+                <button class="btn btn-primary capitalize mt-12">
+                  <img src="./assets/images/icons/map_cards.svg" alt="map cards" class="mr-3" />
+                  <span>View Location on Map</span>
+                </button>
+              </div>
+              <div class="img-container">
+                <img src="./assets/images/card.png" alt="MRi Machine" class="card-img"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 fullService">
+            <div class="card">
+              <div class="card-body w-full">
+                <div class="flex justify-around md:flex-row flex-col-reverse">
+                  <img src="./assets/images/mriScan.png" alt="MRI scan" class="">
+                  <div class="right flex flex-col pb-10">
+                    <h3 class="h3 font-bold text-left capitalize leading-[1.3] lg:mb-4 mb-0">With our <span class="italic">3T MRI scan</span>, we <span class="2xl:block inline-block"></span> ensure to provide the best.</h3>
+                    <h5 class="h5 font-normal text-left capitalize 2xl:mt-0 mt-2">Timely and accurate diagnosis can change a patient's life.</h5>
+                    <div class="btn-grp flex-col 2xl:flex-row flex lg:mt-12 mt-6 justify-start 2xl:gap-9 gap-3 items-start 2xl:items-center ">
+                      <div class="contact-list">
+                        <p class="nav-item-text text-[16px] capitalize">
+                          request an appointment
+                        </p>
+                        <a
+                          href="callto:(877) 674-8888"
+                          class="no-underline flex items-center font-bold xl:text-[24px] lg:text-[24px] text-[20px]"
+                        >
+                          <img
+                            class="icon mr-3 call-icon"
+                            src="./assets/images/icons/call.svg"
+                            alt="Call Icon"
+                          />
+                          <span class="animated-underline-dark">(877) 674-8888</span>
+                        </a>
+                      </div>
+                      <h5 class="h5 w-2/4 text-center 2xl:w-fit">or</h5>
+                      <button class="btn-primary btn capitalize p">
+                        <img
+                          src="./assets/images/icons/calendar.svg"
+                          alt="calendar pic"
+                          class="icon mr-3"
+                        />
+                        <span>Schedule an MRI</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Form -->
+     <section class="form-container py-[100px] flex items-center justify-center w-full h-full">
+      <div class="container mx-auto flex justify-center">
+        <div class="card bg-white border border-solid gap-8 border-[#AEC4E5] rounded-[32px] md:px-16 px-8 py-10 max-w-[1000px]">
+          <div class="header flex flex-col items-center justify-center">
+            <img src="./assets/images/Ct-3.png" alt="ct3">
+            <div class="header-body">
+              <h3 class="h3 text-center font-bold">Schedule an Appointment</h3>
+              <p class="p text-center">Schedule your appointment now: Please fill up this form, Select a date that works best for you</p>
+            </div>
+          </div>
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex aperiam quidem? Consequatur maxime ullam reiciendis eius laborum at obcaecati ea provident accusamus maiores saepe, nesciunt rem necessitatibus, doloremque tempora!
+            Commodi suscipit ad voluptatibus ullam aliquam provident, minus veritatis assumenda. Vitae blanditiis vero enim provident ex aut voluptatum iure eligendi quia illum? Necessitatibus quisquam id accusamus itaque corporis in mollitia.
+            Ipsum laudantium maxime sint fuga aut exercitationem atque libero temporibus, vero recusandae nulla amet suscipit natus non, perferendis animi accusamus voluptas quasi laborum deleniti, officia esse quibusdam eveniet? Voluptates, accusamus.
+            Exercitationem, reprehenderit libero quaerat eius deleniti necessitatibus quod soluta aperiam. Temporibus, voluptatem error culpa est fuga debitis, autem hic voluptate facere esse ab odio quia. Consequatur quae nisi deleniti officiis.
+            Id molestias eos pariatur maiores culpa perferendis modi, repellat nostrum eveniet, excepturi neque laborum. Explicabo officiis recusandae harum ab, nesciunt culpa consectetur nobis, mollitia odio veritatis rem deserunt quidem atque!
+            Dolor, ducimus magnam molestias accusantium, reiciendis ipsum repudiandae sit veritatis laboriosam non, ullam temporibus quisquam unde. Ut aliquam laborum quod, id similique nam, incidunt nulla, deleniti obcaecati non cumque officiis!
+            Ab iste dolorem consequatur atque quam amet nesciunt in quidem. Exercitationem autem et eveniet, doloribus suscipit qui rerum in. Quam consectetur maxime tenetur quibusdam amet magni aliquam minus, velit corporis!
+            Quidem ullam repellat neque quia. Eos, dolor tempore expedita eligendi illum porro minima! Et eaque quaerat neque, tempore voluptate atque ad aspernatur fugit, vero itaque ipsam error molestiae nemo totam!
+            Cum accusamus illum, assumenda tempore voluptas laboriosam incidunt amet, porro distinctio ratione, deserunt reiciendis ullam repellendus ad quae veritatis consequuntur. Maiores aliquam dolores quod magni maxime blanditiis debitis sequi odio!
+            Ipsa temporibus maxime quasi explicabo perspiciatis autem, reiciendis doloribus facilis nostrum expedita sunt vitae, adipisci, unde eaque natus eos sequi dolorem magni sapiente! Illo doloribus tempora officiis harum iusto distinctio.
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <!-- Footer -->
+      <footer class="footer md:pb-0 pb-5 py-20">
+        <div class="container mx-auto">
+          <div class="backToTop">
+            <a href="#" class="btn btn-light rotate-90">
+              <img src="./assets/images/icons/arrow.svg" alt="arrow">
+            </a>
+            <p class="p capitalize mt-10">Back to top</p>
+          </div>
+          <div class="xl:px-36 px:6">
+            <div class="top flex justify-between items-center">
+              <div class="left flex gap-8 md:gap-24 md:flex-row flex-col">
+                <div class="phone">
+                  <p class="font-light">Phone</p>
+                  <a class="h5 font-semibold animated-underline-light" href="callto:(877)MRI-8888" >(877)MRI-8888</a>
+                </div>
+                <div class="email">
+                    <p class="font-light">Email</p>
+                    <a class="h5 font-semibold tracking-[1px] animated-underline-light" href="mailto:scheduling@expertmri.com" >scheduling@expertmri.com</a>
+                </div>
+              </div>
+              <div class="right flex gap-6">
+                <a href="#">
+                  <img src="./assets/images/icons/LinkedIn.svg" alt="Linkedin" class="footer-icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/Facebook.svg" alt="Facebook.svg" class="footer-icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/X.svg" alt="X.svg" class="footer-icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/YouTube.svg" alt="YouTube.svg" class="footer-icon">
+                </a>
+                <a href="#">
+                  <img src="./assets/images/icons/Instagram.svg" alt="Instagram.svg" class="footer-icon">
+                </a>
+              </div>
+            </div>
+            <div class="bottom flex justify-between">
+                <h5 class="h5 lg:w-full md:w-2/4 w-full">
+                  Your modern medical diagnostic service <span class="inline-block lg:block"></span>
+                  in California, United States
+                </h5>
+                  <a href="index.html">
+                    <img class="footerLogo" src="./assets/images/logos/ExpertMRI_light.svg" alt="Logo">
+                  </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     <!-- Js -->
-    <script src="./assets/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
