@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <header class="absolute w-screen 2xl:top-14 top-10 z-[9999]">
+    <header class="absolute w-full lg:w-screen 2xl:top-14 md:top-10 top-5 z-[9999]">
       <nav
         class="navbar container mx-auto bg-transparent flex justify-between items-center"
       >
@@ -58,7 +58,7 @@
 
     <!-- Hero Banner -->
     <section id="hero"
-      class="banner relative overflow-hidden left-0 flex justify-center items-center xl:h-screen w-screen"
+      class="banner relative overflow-hidden left-0 flex justify-center items-center xl:h-screen h-full w-full lg:w-screen"
     >
       <img
         src="./assets/images/bannerBg.jpg"
@@ -66,9 +66,9 @@
         alt="banner"
       />
       <div
-        class="container xl:mt-[114px] mt-[200px] mx-auto flex justify-between items-center z-[1] xl:flex-row flex-col"
+        class="container xl:mt-[114px] md:mt-[200px] mt-[120px] mx-auto flex justify-between items-center z-[1] xl:flex-row flex-col"
       >
-        <div class="left w-full xl:w-2/4 flex flex-col justify-center items-start gap-5">
+        <div class="left w-full xl:w-2/4 flex flex-col justify-center items-start md:gap-5 gap-2">
           <div class="top flex gap-2">
             <img
               src="./assets/images/icons/location.svg"
@@ -82,7 +82,7 @@
               New High-Resolution 3T MRI Facility
             </h2>
           </div>
-          <div class="bottom flex items-center">
+          <div class="bottom flex items-center gap-4">
             <div class="googleReviews bg-white rounded-full flex items-center">
               <img
                 src="./assets/images/icons/google.svg"
@@ -102,11 +102,11 @@
             <img
               src="./assets/images/gold-seal.png"
               alt="Gold Seal"
-              class="ml-14 h-[123px] w-[123px]"
+              class="md:ml-14 ml-0 h-[80px] w-[80px] md:h-[123px] md:w-[123px]"
             />
           </div>
         </div>
-        <div class="right xl:w-2/4 w-full mb-[-200px] xl:mb-0 flex sm:justify-center xl:justify-normal mt-6 xl:mt-0">
+        <div class="right xl:w-2/4 w-full md:mb-[-200px] mb-[-100px] xl:mb-0 flex sm:justify-center xl:justify-normal mt-6 xl:mt-0">
           <img
             src="./assets/images/bannerMri.png"
             alt="MRI machine"
@@ -119,7 +119,7 @@
     <!-- About Us -->
     <section class="aboutUs my-[50px] md:my-[100px]">
       <div class="container mx-auto">
-        <div class="top lg:gap-36 gap-4 flex-col lg:flex-row mb-14 flex justify-between items-center">
+        <div class="top lg:gap-36 gap-4 flex-col lg:flex-row md:mb-14 mb-7 flex justify-between items-center">
           <h3 class="h3 capitalize lg:w-2/4 w-full font-bold">
             A premier imaging facility provider in
             <span class="animated-line">California</span>
@@ -189,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="bottom grid grid-cols-3 mt-[100px]">
+        <div class="bottom md:grid md:grid-cols-3 md:mt-[100px] mt-[50px] flex gap-6 flex-col">
           <div class="count">
             <h2 class="h2 font-bold leading-[1.2]">
               <span class="number" data-value="173"></span>k+
@@ -213,15 +213,15 @@
     </section>
 
     <!-- What We Do -->
-    <section class="whatWeDo py-[100px]">
+    <section class="whatWeDo py-12 lg:py-[100px]">
       <div
-        class="container mx-auto flex gap-[40px] lg:gap-[80px] lg:flex-row flex-col justify-between items-center"
+        class="container mx-auto gap-[40px] lg:gap-[80px] flex flex-col md:flex-row justify-between items-center"
       >
         <div class="left lg:w-2/4 w-full">
           <img
             src="./assets/images/ladyMri.jpg"
             alt="Lady With MRI"
-            class="rounded-[40px] lg:max-h-fit max-h-[400px]"
+            class="rounded-[40px] xl::max-h-full max-h-[400px]"
           />
         </div>
         <div class="right lg:w-2/4 w-full">
@@ -283,7 +283,7 @@
     </section>
 
     <!-- Marquee -->
-    <section class="marqueeContainer my-[100px] relative">
+    <section class="marqueeContainer md:my-[100px] my-[50px] relative">
       <div
         class="container mx-auto flex justify-center items-center relative z-30"
       >
@@ -341,7 +341,7 @@
         <div class="container mx-auto">
           <div class="grid grid-cols-12">
             <div
-            class="slide-main slide-1 flex flex-col p-10 items-start justify-center col-span-4"
+            class="slide-main slide-1 flex flex-col p-5 lg:p-10 items-start justify-center col-span-12 xl:col-span-5"
           >
             <img
               src="./assets/images/logos/logoIcon.svg"
@@ -362,14 +362,14 @@
               <img
                 src="./assets/images/icons/calendar.svg"
                 alt="calendar"
-                class="mr-5"
+                class="md:mr-5 mr-2"
               />
-              <span>Schedule an Appointment now!</span>
+              <span class="text-nowrap">Schedule an Appointment now!</span>
             </button>
           </div>
           </div>
         </div> 
-        <div class="facility-right absolute right-0 top-0 w-full h-full">
+        <div class="facility-right relative px-5 pt-10 xl:pt-0 xl:px-0 xl:absolute xl:right-0 xl:top-0 w-full h-full">
           <div class="facility-swiper-div">
             <div class="swiper card-swiper">
               <div class="swiper-wrapper">
@@ -464,14 +464,14 @@
     </section>
 
     <!-- Testimonial -->
-    <section class="testimonial my-[100px]">
+    <section class="testimonial md:my-[100px] my-[50px]">
       <img
         src="./assets/images/mriBanner.jpg"
         alt="MRI Banner Image"
         class="w-full h-full"
       />
       <div class="container mx-auto py-16">
-        <div class="col-span-12 mt-8 2xl:mt-0">
+        <div class="col-span-12 mt-8 md:py-0 py-8 2xl:mt-0">
           <div class="container mx-auto mb-[-50px]">
             <div class="header">
               <h5 class="h5 capitalize font-bold text-white">
@@ -488,7 +488,7 @@
                   <h4 class="h4 capitalize font-bold text-white">
                     Amazing experience!
                   </h4>
-                  <h4 class="h4 capitalize text-white w-[70%]">
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
                     Amazing experience! Patrice was so sweet and knowledgeable.
                     She really went the extra mile. Dr. Farukhi read my images
                     and made sure to follow up with me to address any concerns
@@ -530,7 +530,7 @@
                   <h4 class="h4 capitalize font-bold text-white">
                     Amazing experience!
                   </h4>
-                  <h4 class="h4 capitalize text-white w-[70%]">
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
                     Amazing experience! Patrice was so sweet and knowledgeable.
                     She really went the extra mile. Dr. Farukhi read my images
                     and made sure to follow up with me to address any concerns
@@ -571,7 +571,7 @@
                   <h4 class="h4 capitalize font-bold text-white">
                     Amazing experience!
                   </h4>
-                  <h4 class="h4 capitalize text-white w-[70%]">
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
                     Amazing experience! Patrice was so sweet and knowledgeable.
                     She really went the extra mile. Dr. Farukhi read my images
                     and made sure to follow up with me to address any concerns
@@ -612,7 +612,7 @@
                   <h4 class="h4 capitalize font-bold text-white">
                     Amazing experience!
                   </h4>
-                  <h4 class="h4 capitalize text-white w-[70%]">
+                  <h4 class="h4 capitalize slide-content text-white md:w-[70%] w-full">
                     Amazing experience! Patrice was so sweet and knowledgeable.
                     She really went the extra mile. Dr. Farukhi read my images
                     and made sure to follow up with me to address any concerns
@@ -683,7 +683,7 @@
             <span class="animated-line">3T MRI service</span> in California
           </h3>
         <div class="grid grid-cols-12 gap-6">
-          <div class="col-span-6">
+          <div class="md:col-span-6 col-span-12">
             <div class="card">
               <div class="card-body flex flex-col justify-center items-center">
                 <h3 class="h3 font-bold text-center">Culver City, CA</h3>
@@ -700,7 +700,7 @@
               </div>
             </div>
           </div>
-          <div class="col-span-6">
+          <div class="md:col-span-6 col-span-12">
             <div class="card">
               <div class="card-body flex flex-col justify-center items-center">
                 <h3 class="h3 font-bold text-center">Culver City, CA</h3>
@@ -720,19 +720,19 @@
           <div class="col-span-12 fullService">
             <div class="card">
               <div class="card-body w-full">
-                <div class="container flex justify-around">
+                <div class="flex justify-around md:flex-row flex-col-reverse">
                   <img src="./assets/images/mriScan.png" alt="MRI scan" class="">
                   <div class="right flex flex-col pb-10">
-                    <h3 class="h3 font-bold text-left capitalize leading-[1.3] mb-4">With our <span class="italic">3T MRI scan</span>, we <span class="2xl:block inline-block"></span> ensure to provide the best.</h3>
-                    <h5 class="h5 font-normal text-left capitalize">Timely and accurate diagnosis can change a patient's life.</h5>
-                    <div class="btn-grp flex-col 2xl:flex-row flex mt-12 justify-start 2xl:gap-9 gap-3 items-start 2xl:items-center ">
+                    <h3 class="h3 font-bold text-left capitalize leading-[1.3] lg:mb-4 mb-0">With our <span class="italic">3T MRI scan</span>, we <span class="2xl:block inline-block"></span> ensure to provide the best.</h3>
+                    <h5 class="h5 font-normal text-left capitalize 2xl:mt-0 mt-2">Timely and accurate diagnosis can change a patient's life.</h5>
+                    <div class="btn-grp flex-col 2xl:flex-row flex lg:mt-12 mt-6 justify-start 2xl:gap-9 gap-3 items-start 2xl:items-center ">
                       <div class="contact-list">
                         <p class="nav-item-text text-[16px] capitalize">
                           request an appointment
                         </p>
                         <a
                           href="callto:(877) 674-8888"
-                          class="no-underline flex items-center font-bold text-[24px]"
+                          class="no-underline flex items-center font-bold xl:text-[24px] lg:text-[24px] text-[20px]"
                         >
                           <img
                             class="icon mr-3 call-icon"
@@ -764,7 +764,7 @@
     <!-- Form -->
      <section class="form-container py-[100px] flex items-center justify-center w-full h-full">
       <div class="container mx-auto flex justify-center">
-        <div class="card bg-white border border-solid gap-8 border-[#AEC4E5] rounded-[32px] px-16 py-10 max-w-[1000px]">
+        <div class="card bg-white border border-solid gap-8 border-[#AEC4E5] rounded-[32px] md:px-16 px-8 py-10 max-w-[1000px]">
           <div class="header flex flex-col items-center justify-center">
             <img src="./assets/images/Ct-3.png" alt="ct3">
             <div class="header-body">
@@ -789,17 +789,17 @@
      </section>
 
      <!-- Footer -->
-      <footer class="footer py-20">
+      <footer class="footer md:pb-0 pb-5 py-20">
         <div class="container mx-auto">
           <div class="backToTop">
-            <a href="#hero" class="btn btn-light rotate-90">
+            <a href="#" class="btn btn-light rotate-90">
               <img src="./assets/images/icons/arrow.svg" alt="arrow">
             </a>
             <p class="p capitalize mt-10">Back to top</p>
           </div>
           <div class="xl:px-36 px:6">
             <div class="top flex justify-between items-center">
-              <div class="left flex gap-24">
+              <div class="left flex gap-8 md:gap-24 md:flex-row flex-col">
                 <div class="phone">
                   <p class="font-light">Phone</p>
                   <a class="h5 font-semibold animated-underline-light" href="callto:(877)MRI-8888" >(877)MRI-8888</a>
@@ -828,11 +828,13 @@
               </div>
             </div>
             <div class="bottom flex justify-between">
-                <h5 class="h5">
+                <h5 class="h5 lg:w-full md:w-2/4 w-full">
                   Your modern medical diagnostic service <span class="inline-block lg:block"></span>
                   in California, United States
                 </h5>
-                  <a href="index.html"><img src="./assets/images/logos/ExpertMRI_light.svg" alt="Logo"></a>
+                  <a href="index.html">
+                    <img class="footerLogo" src="./assets/images/logos/ExpertMRI_light.svg" alt="Logo">
+                  </a>
             </div>
           </div>
         </div>

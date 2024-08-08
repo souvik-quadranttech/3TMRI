@@ -65,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function isMobile() {
+  return window.innerWidth <= 768; // Adjust breakpoint as needed
+}
+
 // carousel
 const swiper = new Swiper(".card-swiper", {
   slidesPerView: 1.5,
@@ -73,20 +77,23 @@ const swiper = new Swiper(".card-swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: false,
+  autoplay: isMobile()
+    ? {
+        delay: 3000, // Auto scroll delay (in ms)
+        disableOnInteraction: true,
+      }
+    : false,
   breakpoints: {
-    640: {
+    0: {
       slidesPerView: 1,
       spaceBetween: 20,
     },
-    980: {
-      slidesPerView: 1,
+    768: {
+      slidesPerView: 2,
       spaceBetween: 20,
     },
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    1280: {
+    1200: {
       slidesPerView: 1.5,
       spaceBetween: 20,
     },
@@ -98,6 +105,12 @@ const testi_swiper = new Swiper(".testi-swiper", {
   slidesPerView: 1,
   centeredSlides: false,
   spaceBetween: 30,
+  autoplay: isMobile()
+    ? {
+        delay: 3500, // Auto scroll delay (in ms)
+        disableOnInteraction: true,
+      }
+    : false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -135,6 +148,28 @@ let btnLight = document.querySelectorAll(".btn-light");
 btnLight.forEach((btn) => {
   let image = btn.querySelector("img");
   let image2 = image.cloneNode(true);
-  image2.classList.add("arrow-2")
+  image2.classList.add("arrow-2");
   btn.append(image2);
+});
+
+// Back to top button
+document.querySelector(".backToTop").addEventListener("click", function () {
+  // The total duration of the scroll in milliseconds
+  const duration = 700; // Change this value to control the speed
+  // Get the current scroll position
+  const start = window.scrollY;
+  // Get the start time
+  let startTime = null;
+  // Animation function
+  function scrollStep(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = timestamp - startTime;
+    const scrollDistance = Math.max(start - (progress / duration) * start, 0);
+    window.scrollTo(0, scrollDistance);
+    if (scrollDistance > 0) {
+      window.requestAnimationFrame(scrollStep);
+    }
+  }
+  // Start the animation
+  window.requestAnimationFrame(scrollStep);
 });
