@@ -436,7 +436,7 @@ header.bg-light {
 
 @keyframes menuList {
     0% {
-        transform: translateX(-145%);
+        transform: translateX(-90%);
     }
 
     100% {
@@ -527,7 +527,7 @@ header.bg-light {
 }
 
 .swiperContainer .swiper-slide .carousel-image {
-    max-height: 420px;
+    max-height: 380px;
     width: 100%;
     height: 100%;
     border-radius: 16px;
