@@ -8,12 +8,13 @@
     --secondary-border-color: #033d5a1f;
     --light-border-color: rgb(255, 255, 255);
 
-    --h2: 110px;
+    --h2: 94px;
     --h3: 46px;
     --h4: 32px;
     --h5: 24px;
     --p: 16px;
 
+    --border-radious: 42px;
     --animation-duration: 180s;
 }
 
@@ -28,7 +29,9 @@
 body {
     width: 100%;
     overflow-x: clip;
+    overflow-y: scroll;
     color: var(--primary-text-color);
+    scroll-behavior: smooth;
 }
 
 /* Global */
@@ -36,6 +39,7 @@ body {
 h2,
 .h2 {
     font-size: var(--h2);
+    line-height: 1.2;
 }
 
 h3,
@@ -56,7 +60,7 @@ h5 {
 p,
 .p {
     font-size: var(--p);
-    letter-spacing: .7px;
+    letter-spacing: 0.5px;
 }
 
 .container {
@@ -66,6 +70,60 @@ p,
 .light_text {
     color: var(--secodary-text-color) !important;
 }
+
+.visible {
+    animation: visible 1s ease forwards;
+}
+
+@keyframes visible {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#heart_svg:hover #heart {
+    animation: animate-svg 30s ease;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    animation-delay: 2;
+}
+
+#heart_svg:hover .heart {
+    animation: animate-svg 30s ease;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    animation-delay: 2;
+}
+
+#injection_svg:hover #injection {
+    animation-delay: 2;
+    animation: animate-svg 30s ease;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+@keyframes animate-svg {
+    0% {
+        stroke-dasharray: 2230px;
+        stroke-dashoffset: 2230px;
+    }
+
+    1% {
+        stroke-dashoffset: 2230px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2230px;
+    }
+}
+
 
 
 .btn {
@@ -130,16 +188,21 @@ p,
     transition: .3s ease;
 }
 
-.btn-light:hover img:not(.arrow-2) {
+.animated-btn,
+.animated-btn * {
+    transition: .3s ease;
+}
+
+.animated-btn:hover img:not(.arrow-2) {
     transform: translateX(-80px);
 }
 
-.btn-light .arrow-2 {
+.animated-btn .arrow-2 {
     transform: translateX(80px);
     position: absolute;
 }
 
-.btn-light:hover .arrow-2 {
+.animated-btn:hover .arrow-2 {
     transform: translateX(0px);
 }
 
@@ -221,6 +284,7 @@ p,
 
 .animated-line {
     position: relative;
+    display: inline-block;
 }
 
 .animated-line::before {
@@ -233,8 +297,7 @@ p,
     transform: rotate(3deg) scale(0);
     height: 6px;
     border-radius: 20px;
-    animation: line-1 .7s ease-in-out forwards;
-    animation-delay: 1s;
+    animation: line-1 .5s ease-in-out forwards;
 }
 
 .animated-line::after {
@@ -246,7 +309,7 @@ p,
     transform: rotate(-4deg) scale(0);
     height: 6px;
     border-radius: 20px;
-    animation: line-2 .7s ease-in-out forwards;
+    animation: line-2 .5s ease-in-out forwards;
     width: calc(100% + 40px);
 }
 
@@ -297,7 +360,7 @@ header.bg-light {
 .aboutUs .card {
     border-radius: 32px 32px 0px 0px;
     background: linear-gradient(180deg, #338cca33 0%, #338cca00 100%);
-    padding: 80px 100px 0 100px;
+    padding: 80px 80px 0 80px;
 }
 
 .aboutUs .card .card-image {
@@ -310,10 +373,17 @@ header.bg-light {
     margin-bottom: 32px;
 }
 
+
 .aboutUs .card .card-image img {
     width: 100px;
     height: 100px;
+    transition: 0.5s ease;
 }
+
+.aboutUs .card:hover .card-image img {
+    scale: 1.1;
+}
+
 
 .aboutUs .count {
     display: flex;
@@ -501,10 +571,15 @@ header.bg-light {
     border-radius: 16px;
 }
 
+
 .card-swiper {
     margin-top: -170px;
     padding-top: 170px !important;
 }
+
+/* .card-swiper .swiper-wrapper {
+    margin-left: 20px;
+} */
 
 .swiperContainer .facility-slide {
     text-align: center;
@@ -546,6 +621,7 @@ header.bg-light {
     padding: 22px 30px;
     border: 2px solid var(--primary-border-color);
     border-radius: 50px;
+    overflow: hidden;
 }
 
 .swiperContainer .swiper-button-next,
@@ -718,9 +794,22 @@ header.bg-light {
     transition: bottom .5s ease;
 }
 
+.service .card .img-container img.card-img.right {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    transition: bottom .5s ease;
+}
+
 .service .card:hover img.card-img {
     position: absolute;
     bottom: -30px;
+    left: 0;
+}
+
+.service .card:hover img.card-img.right {
+    position: absolute;
+    bottom: -20px;
     left: 0;
 }
 
@@ -799,6 +888,7 @@ header.bg-light {
     position: absolute;
     top: -120px;
     right: -20px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .footer .footer-icon {
@@ -827,7 +917,7 @@ header.bg-light {
 
 @media screen and (max-width: 1440px) {
     :root {
-        --h2: 92px;
+        --h2: 76px;
         --h3: 38px;
         --h4: 28px;
         --h5: 20px;
@@ -836,6 +926,14 @@ header.bg-light {
 
     .aboutUs .card {
         padding: 40px 50px 0 50px;
+    }
+
+    .service .card .img-container {
+        height: 300px;
+    }
+
+    .gap-9 {
+        gap: 1.75rem;
     }
 }
 
@@ -852,8 +950,13 @@ header.bg-light {
 @media screen and (max-width: 1280px) {
     :root {
         --h2: 50px;
-        --h3: 30px;
+        --h3: 40px;
         --h4: 24px;
+    }
+
+    .icon {
+        width: 26px;
+        height: 26px;
     }
 
     .whatWeDo .animated-line::before {
@@ -895,6 +998,21 @@ header.bg-light {
 }
 
 @media screen and (max-width: 1200px) {
+    :root {
+        --h3: 34px;
+        --h4: 24px;
+        --p: 14px;
+    }
+
+    .footer .btn-light {
+        padding: 8px 10px !important;
+        width: 60px;
+    }
+
+    .footer .btn-light p {
+        margin-top: 20px;
+    }
+
     .bannerMri {
         max-width: 600px;
     }
@@ -908,7 +1026,7 @@ header.bg-light {
     }
 
     .service .card .img-container {
-        height: 200px;
+        height: 250px;
     }
 
     .fullService img:not(.icon) {
@@ -917,10 +1035,26 @@ header.bg-light {
 
     .service .card {
         padding: 40px 20px 0 20px;
+        height: 100%;
     }
 
-    .service .card .img-container img.card-img {
+    .service .card .img-container img {
         bottom: -50px;
+    }
+
+    .service .card:hover .img-container img {
+        bottom: -40px;
+    }
+
+    .fullService .btn-grp {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
     }
 
     .card-swiper {
@@ -938,15 +1072,28 @@ header.bg-light {
         border-color: var(--light-border-color);
     }
 
-    .testimonial .swiperContainer .swiper-button-next img,
-    .testimonial .swiperContainer .swiper-button-prev img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    .swiperContainer .slide-main {
+        height: 400px;
+    }
+
+    .swiperContainer .swiper-button-next img,
+    .swiper-rtl .swiper-button-prev img,
+    .swiperContainer .swiper-button-prev img,
+    .swiper-rtl .swiper-button-next img {
+        filter: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7469%) hue-rotate(109deg) brightness(107%) contrast(107%);
     }
 
     .card-swiper .swiper-button-next {
         top: 50%;
         right: 0px !important;
         border-color: var(--light-border-color);
+    }
+
+    .backToTop {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        top: -100px;
     }
 
     @keyframes menuList {
@@ -962,15 +1109,29 @@ header.bg-light {
 
 @media screen and (max-width: 980px) {
     :root {
-        --h2: 50px;
         --h3: 24px;
         --h4: 20px;
         --h5: 16px;
     }
 
+    .swiperContainer .slide-main {
+        height: 400px;
+    }
+
+    .swiperContainer .facility-slide {
+        height: 430px;
+    }
+
     .icon {
         width: 24px;
         height: 24px;
+    }
+
+    .fullService img:not(.icon) {
+        object-fit: contain;
+        object-position: top;
+        max-width: 100%;
+        height: 300px;
     }
 
     .btn-primary {
@@ -996,11 +1157,9 @@ header.bg-light {
 
 @media screen and (max-width: 820px) {
     :root {
-        --h2: 50px;
         --h3: 24px;
         --h4: 20px;
         --h5: 18px;
-        --p: 14px;
     }
 
     p,
@@ -1057,10 +1216,6 @@ header.bg-light {
         display: none;
     }
 
-    .swiperContainer .slide-main {
-        height: 400px;
-    }
-
     .service .card .img-container {
         height: 300px;
     }
@@ -1104,11 +1259,9 @@ header.bg-light {
 
 @media screen and (max-width: 430px) {
     :root {
-        --h2: 50px;
         --h3: 24px;
         --h4: 20px;
         --h5: 16px;
-        --p: 14px;
     }
 
     .nav-brand img {
@@ -1139,6 +1292,10 @@ header.bg-light {
     .testimonial .swiperContainer .swiper-button-next,
     .testimonial .swiperContainer .swiper-button-prev {
         display: none;
+    }
+
+    .footer {
+        padding-bottom: 20px !important;
     }
 
     .testimonial .swiper-pagination {

@@ -6,13 +6,14 @@
     <title>3TMRI</title>
     <link rel="stylesheet" href="./assets/css/output.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/logos/favIcon.svg">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
   <body>
-    <header class="absolute w-full lg:w-screen 2xl:top-14 md:top-10 top-5 z-[9999]">
+    <header class="absolute w-full xl:w-screen 2xl:top-14 md:top-10 top-5 z-[9999]">
       <nav
         class="navbar container mx-auto bg-transparent flex justify-between items-center"
       >
@@ -43,12 +44,19 @@
             </a>
           </li>
           <li class="nav-list">
-            <button class="btn-outline-light btn capitalize p">
-              <img
+            <button class="btn-outline-light btn capitalize p flex gap-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 2V4M6 2V4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.9955 13H12.0045M11.9955 17H12.0045M15.991 13H16M8 13H8.00897M8 17H8.00897" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 8H20.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 12.2432C2.5 7.88594 2.5 5.70728 3.75212 4.35364C5.00424 3 7.01949 3 11.05 3H12.95C16.9805 3 18.9958 3 20.2479 4.35364C21.5 5.70728 21.5 7.88594 21.5 12.2432V12.7568C21.5 17.1141 21.5 19.2927 20.2479 20.6464C18.9958 22 16.9805 22 12.95 22H11.05C7.01949 22 5.00424 22 3.75212 20.6464C2.5 19.2927 2.5 17.1141 2.5 12.7568V12.2432Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3 8H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <!-- <img
                 src="./assets/images/icons/calendar.svg"
                 alt="calendar pic"
                 class="icon mr-3"
-              />
+              /> -->
               <span>Schedule an MRI</span>
             </button>
           </li>
@@ -68,7 +76,7 @@
       <div
         class="container xl:mt-[114px] md:mt-[200px] mt-[120px] mx-auto flex justify-between items-center z-[1] xl:flex-row flex-col"
       >
-        <div class="left w-full xl:w-2/4 flex flex-col justify-center items-start md:gap-5 gap-2">
+        <div class="left w-full xl:w-2/4 flex flex-col justify-center xl:items-start items-center xl:gap-5 gap-2">
           <div class="top flex gap-2">
             <img
               src="./assets/images/icons/location.svg"
@@ -77,7 +85,7 @@
             />
             <h5 class="h5 font-bold text-white">Costa Mesa and Culver City</h5>
           </div>
-          <div class="middle my-4">
+          <div class="middle xl:my-4 my-2">
             <h2 class="h2 text-white leading-[1.1] font-bold">
               New High-Resolution 3T MRI Facility
             </h2>
@@ -102,7 +110,7 @@
             <img
               src="./assets/images/gold-seal.png"
               alt="Gold Seal"
-              class="md:ml-14 ml-0 h-[80px] w-[80px] md:h-[123px] md:w-[123px]"
+              class="xl:ml-14 ml-0 h-[80px] w-[80px] lg:h-[123px] lg:w-[123px]"
             />
           </div>
         </div>
@@ -110,19 +118,19 @@
           <img
             src="./assets/images/bannerMri.png"
             alt="MRI machine"
-            class="xl:absolute xl:bottom-[-35%] bannerMri"
+            class="xl:absolute 2xl:bottom-[-280px] xl:bottom-[-200px] 2xl:right-[-100px] w-full 2xl:max-w-[50%] xl:max-w-[60%] bannerMri"
           />
         </div>
       </div>
     </section>
 
     <!-- About Us -->
-    <section class="aboutUs my-[50px] xl:my-[100px]">
+    <section class="aboutUs my-[50px] xl:my-[100px] section">
       <div class="container mx-auto">
-        <div class="top lg:gap-36 gap-4 flex-col lg:flex-row md:mb-14 mb-7 flex justify-between items-center">
+        <div class="top xl:gap-36 gap-0 flex-col lg:flex-row md:mb-14 mb-7 flex justify-between items-center">
           <h3 class="h3 capitalize lg:w-2/4 w-full font-bold">
             A premier imaging facility provider in
-            <span class="animated-line">California</span>
+            <span class="animated-span">California</span>
           </h3>
           <p class="p lg:w-2/4 w-full font-normal leading-7">
             Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
@@ -213,57 +221,71 @@
     </section>
 
     <!-- What We Do -->
-    <section class="whatWeDo py-12 lg:py-[100px]">
+    <section class="whatWeDo section py-12 lg:py-[100px]">
       <div
-        class="container mx-auto gap-[40px] lg:gap-[80px] flex flex-col md:flex-row justify-between items-center"
+        class="container mx-auto gap-[40px] lg:gap-[80px] flex flex-col lg:flex-row justify-between items-center"
       >
         <div class="left lg:w-2/4 w-full">
           <img
             src="./assets/images/ladyMri.jpg"
             alt="Lady With MRI"
-            class="rounded-[40px] md:max-h-full max-h-[400px]"
+            class="rounded-[40px] lg:max-h-full max-h-[400px]"
           />
         </div>
         <div class="right lg:w-2/4 w-full">
-          <h2 class="capitalize text-white font-bold leading-[1.2] lg:mb-0 mb-4">
+          <h2 class="capitalize text-white font-bold leading-[1.2] 2xl:mb-0 mb-4">
             <span class="inline-block light_text">ExpertMRI</span>, <br />
-            Your <span class="animated-line">Imaging</span> Partner
+            Your <span class="animated-span">Imaging</span> Partner
           </h2>
-          <p class="font-normal lg:mb-16 mb-8 text-white leading-[1.8] p">
+          <p class="font-normal lg:mb-16 mb-8 text-white leading-[1.8] w-full md:w-[80%] xl:w-full p">
             Tortor in ultricies vivamus a adipiscing faucibus. Fermentum urna
             sodales dictum turpis non vitae fames. Eu convallis venenatis
             faucibus lectus cursus commodo. At ante dignissim ad congue duis
             massa.
           </p>
           <div class="card-grp my-[60px] grid grid-cols-2">
-            <div class="card">
-              <img
+            <div class="card" id="heart_svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 44 45" fill="none">
+                <path id="heart" d="M15.3919 5.56579C18.0959 3.8904 20.456 4.56556 21.8737 5.64101C22.455 6.08197 22.7456 6.30246 22.9167 6.30246C23.0877 6.30246 23.3783 6.08197 23.9596 5.64101C25.3774 4.56556 27.7374 3.8904 30.4414 5.56579C33.9902 7.76454 34.7932 15.0183 26.6077 21.1382C25.0486 22.3038 24.2691 22.8865 22.9167 22.8865C21.5642 22.8865 20.7847 22.3038 19.2256 21.1382C11.0402 15.0183 11.8432 7.76454 15.3919 5.56579Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <g class="heart">
+                  <path  d="M7.33334 26.5538H11.7238C12.2631 26.5538 12.795 26.6754 13.2773 26.9088L17.0209 28.7201C17.5033 28.9535 18.0351 29.0749 18.5744 29.0749H20.4859C22.3346 29.0749 23.8333 30.5252 23.8333 32.3142C23.8333 32.3864 23.7838 32.45 23.712 32.4698L19.0537 33.7579C18.218 33.9889 17.3232 33.9084 16.5458 33.5322L12.5439 31.596" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.8333 31.1373L32.2535 28.5502C33.7462 28.0851 35.3597 28.6366 36.2947 29.9315C36.9708 30.8676 36.6955 32.2083 35.7106 32.7766L21.932 40.7265C21.0557 41.2321 20.0217 41.3555 19.0579 41.0695L7.33334 37.5904" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>
+              <!-- <img
                 src="./assets/images/icons/headrHand.svg"
                 alt="hand heart"
-                class="w-[44px] h-[44px]"
-              />
+                class=""
+              /> -->
               <div class="card-body">
                 <h5 class="h5 text-white mt-2 font-bold capitalize">
                   15 years of
                   <span class="block">experience</span>
                 </h5>
-                <p class="text-white mt-2 leading-7 !w-3/4">
+                <p class="text-white mt-2 lg:leading-7 leading-4 !w-3/4">
                   Tortor in ultricies vivamus a adipiscing faucibus. Fermentum
                   urna sodales dictum turpis
                 </p>
               </div>
             </div>
-            <div class="card">
-              <img
+            <div class="card" id="injection_svg">
+              <svg id="injection" xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45" fill="none">
+                <path d="M22.1578 33.1011L33.5429 21.9397C34.0052 21.478 34.3719 20.9297 34.6221 20.3261C34.8723 19.7226 35.001 19.0756 35.001 18.4223C35.001 17.7689 34.8723 17.122 34.6221 16.5184C34.3719 15.9149 34.0052 15.3666 33.5429 14.9048L30.4108 11.7727C29.949 11.3104 29.4007 10.9437 28.7972 10.6935C28.1936 10.4433 27.5467 10.3146 26.8933 10.3146C26.24 10.3146 25.593 10.4433 24.9895 10.6935C24.3859 10.9437 23.8376 11.3104 23.3759 11.7727L12.2145 23.1578" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.4575 39.3157L5.99998 31.8582" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.1862 28.1294L9.72874 35.5869" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M31.9769 13.3389L38.3157 7.00001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25.8866 36.8298L8.48581 19.4291" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <!-- <img
                 src="./assets/images/icons/injectionIcon.svg"
                 alt="hand heart"
                 class="w-[44px] h-[44px]"
-              />
+              /> -->
               <div class="card-body">
                 <h5 class="h5 text-white mt-2 font-bold capitalize">
                   Highly Equipped <span class="block">Clinic</span>
                 </h5>
-                <p class="text-white mt-2 leading-7 !w-3/4">
+                <p class="text-white mt-2 lg:leading-7 leading-4 !w-3/4">
                   Tortor in ultricies vivamus a adipiscing faucibus. Fermentum
                   urna sodales dictum turpis
                 </p>
@@ -283,7 +305,7 @@
     </section>
 
     <!-- Marquee -->
-    <section class="marqueeContainer xl:my-[100px] my-[50px] relative">
+    <section  class="marqueeContainer section xl:my-[100px] my-[50px] relative">
       <div
         class="container mx-auto flex justify-center items-center relative z-30"
       >
@@ -352,7 +374,7 @@
     </section>
 
     <!-- Facilities Carousel -->
-    <section class="carousel relative" id="facilitySection">
+    <section class="carousel relative section" id="facilitySection">
       <div class="container mx-auto mb-10">
         <div class="header">
           <h3 class="h3 capitalize font-bold">
@@ -367,11 +389,16 @@
             <div
             class="slide-main slide-1 flex flex-col p-5 lg:p-10 items-start justify-center col-span-12 xl:col-span-5"
           >
-            <img
+          <svg id="swiperSvg" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.5985 35.1337C43.4997 34.7484 43.171 34.2145 43.0288 34.0419C42.9149 33.9301 42.7997 33.7401 42.7347 33.4992L42.7477 33.1998L42.8606 30.9066L42.8661 30.8729C42.9126 30.5343 43.1459 28.8021 43.1459 27.8949C43.1459 26.9985 42.5763 25.8079 42.4557 25.567C42.662 23.8317 42.5416 21.0489 42.5285 20.8242C42.5523 20.6735 42.713 19.498 42.713 19.0379C42.713 18.5833 42.713 17.8214 42.0423 16.7904C41.3347 15.7007 40.308 15.6085 39.2389 15.6085C39.2357 15.6085 39.2326 15.6085 39.2303 15.6085C39.0567 15.5835 37.7371 14.9302 36.8047 14.4527L36.8405 13.261C37.0468 12.9789 37.0598 12.8682 37.0641 12.8313C37.075 12.7434 37.138 12.2821 37.203 11.7937L37.2041 11.784C37.496 11.6451 37.7141 11.2652 37.7609 11.0644C37.7695 11.0254 37.7815 10.983 37.7912 10.9385C37.8889 10.5511 37.9986 10.1094 37.7381 9.97373C37.7152 9.96179 37.6914 9.95202 37.6676 9.94661C37.7413 9.58629 37.7794 9.09249 37.6349 8.19497C37.4678 7.15528 36.1504 6.78845 35.0758 6.78845H35.0444C33.9494 6.78845 32.6275 7.15744 32.5135 8.20256C32.4289 8.98288 32.4158 9.55807 32.4723 9.94768C32.4506 9.95419 32.4268 9.96288 32.4061 9.97373C32.1446 10.1094 32.2541 10.5511 32.3518 10.9385C32.3617 10.983 32.3735 11.0254 32.3821 11.0644C32.4333 11.2902 32.6567 11.6396 32.9248 11.7775L32.9271 11.8002C32.9943 12.2854 33.0562 12.7434 33.0659 12.8313C33.0735 12.8964 33.104 12.9724 33.1615 13.0711L33.2265 14.4548C32.2943 14.9324 30.9757 15.5846 30.8108 15.6096C29.7297 15.6096 28.701 15.6996 27.9901 16.7915C27.3184 17.8235 27.3184 18.5843 27.3184 19.039C27.3184 19.498 27.4801 20.6745 27.5018 20.8255C27.4909 21.05 27.3704 23.8327 27.5755 25.5681C27.454 25.8079 26.8853 26.9985 26.8853 27.896C26.8853 28.8034 27.1196 30.5364 27.1653 30.874L27.1697 30.9076L27.2934 33.3908C27.2359 33.6837 27.1034 33.9138 26.9722 34.044C26.8278 34.2166 26.5012 34.7507 26.4035 35.1358C26.2634 35.7458 25.6719 36.6964 25.7045 36.8484C25.8098 37.047 25.9878 37.1197 26.1484 37.0243C26.3243 36.9049 26.7334 36.474 26.7876 36.2603C26.8657 36.5239 27.2043 38.4341 27.3357 38.6663C27.3824 38.8822 27.5246 39.0765 27.6873 39.0808C27.8371 39.0277 27.9282 38.9571 27.9282 38.9571C27.9739 39.1688 28.0542 39.4324 28.346 39.4488C28.4882 39.4259 28.5469 39.324 28.536 39.185C28.6478 39.2218 28.9255 39.1437 29.0026 38.9441C29.0666 38.7704 29.1102 38.549 29.1285 38.4372C29.1264 38.4069 29.1361 38.396 29.1285 38.4372C29.1329 38.4806 29.1795 38.5349 29.2871 38.5404C29.3955 38.5252 29.4791 38.46 29.516 38.0563C29.541 37.7992 29.5356 37.0362 29.5269 36.9971C29.5181 36.9581 29.4781 36.4035 29.4629 36.1441C29.5387 35.8457 29.4964 34.9069 29.4585 34.7353C29.4162 34.5422 29.3446 34.3956 29.0992 34.0061C29.122 33.6729 29.1296 33.3973 29.134 33.2909C29.1416 33.1922 29.1492 33.0869 29.1525 33.0033C29.1753 32.5703 29.2077 32.122 29.2121 32.0319C29.2534 31.8942 29.3359 31.6891 29.4334 31.4514C29.7276 30.735 30.1749 29.6486 30.1553 28.6242C30.1422 27.8634 30.1216 27.2274 30.1096 26.9181C30.102 26.6968 30.0934 26.5188 30.089 26.3971C30.0837 26.3278 30.0824 26.2702 30.0749 26.2247L30.0793 26.1933C30.153 25.5171 30.2941 24.2061 30.3517 23.2728C30.5514 23.8424 30.8563 24.5956 31.2623 25.2804C31.2612 26.2583 31.2318 26.8781 31.209 27.3761C31.1928 27.6854 31.1819 27.935 31.1797 28.1902C31.0452 28.3953 30.4863 29.3437 30.4798 30.7503C30.2572 31.5642 30.0304 32.4693 30.0184 33.0305V33.038V33.0435C30.0239 33.1031 30.433 39.0005 30.8769 40.5742C30.9572 40.8553 31.0506 41.1635 31.1483 41.488C31.5379 42.7837 32.0231 44.3965 31.985 45.3624C31.9709 45.7596 31.8559 46.1005 31.7245 46.4943C31.4608 47.2747 31.1635 48.1625 31.5194 49.8414C31.8125 51.2185 32.0111 51.8252 32.2021 52.4146C32.3594 52.904 32.5104 53.3652 32.711 54.2378C32.7991 54.6187 32.8707 54.9302 32.9313 55.1906C33.1659 56.1968 33.2168 56.4126 33.2223 56.7729C33.144 56.8262 33.0301 56.9195 32.9553 57.0574C32.8804 57.1941 32.8772 57.4046 32.9542 57.5554C32.8033 57.6955 32.6329 57.8334 32.5331 57.8995C32.3985 57.9951 32.2 58.2044 32.1478 58.2631C32.0621 58.3293 32.0273 58.4324 32.0111 58.5095C31.9264 58.5647 31.8755 58.6451 31.8732 58.7428C31.87 58.8785 31.9622 59.0098 32.0924 59.0629C32.1717 59.0922 32.2564 59.0977 32.3204 59.0857C32.3703 59.1139 32.4419 59.1356 32.5439 59.1444C32.659 59.1562 32.7403 59.1421 32.8033 59.1215C32.849 59.1476 32.913 59.1627 32.9966 59.1627C33.1257 59.1627 33.2179 59.1411 33.284 59.1086C33.3428 59.1552 33.4219 59.191 33.5315 59.191H33.5609C33.7953 59.191 33.9482 59.1259 34.0406 59.0564C34.148 59.1303 34.3281 59.1985 34.6408 59.1693C34.8035 59.1541 34.9282 59.115 35.0141 59.0564C35.1009 59.1162 35.2245 59.1552 35.3896 59.1693C35.701 59.1975 35.8811 59.1303 35.9897 59.0564C36.083 59.1259 36.2327 59.191 36.4683 59.191H36.4955C36.604 59.191 36.6865 59.1552 36.744 59.1086C36.8101 59.1411 36.9034 59.1627 37.0272 59.1627H37.0403C37.1205 59.1627 37.1814 59.1476 37.2269 59.1215C37.2898 59.1432 37.3713 59.1552 37.4831 59.1444C37.584 59.1356 37.6566 59.115 37.7055 59.0857C37.7695 59.0987 37.8586 59.0933 37.9367 59.0629C38.0658 59.0098 38.1591 58.8785 38.1559 58.7428C38.1526 58.6451 38.1016 58.5647 38.0159 58.5095C38.0018 58.4335 37.966 58.3293 37.8803 58.2631C37.8293 58.2044 37.6305 57.9951 37.496 57.8995C37.3972 57.8323 37.2269 57.6955 37.0761 57.5554C37.1531 57.4046 37.1508 57.1941 37.075 57.0574C36.999 56.9195 36.8861 56.8262 36.8069 56.7729C36.8135 56.4126 36.8634 56.1968 37.0988 55.1906C37.1597 54.9302 37.2323 54.6187 37.3214 54.2378C37.52 53.3652 37.6707 52.904 37.8303 52.4146C38.0224 51.8252 38.2189 51.2175 38.5097 49.8414C38.8668 48.1625 38.5695 47.2747 38.3067 46.4943C38.1755 46.1005 38.0603 45.7596 38.0452 45.3624C38.0083 44.3955 38.4924 42.7837 38.883 41.488C38.9807 41.1635 39.073 40.8553 39.1521 40.5742C39.5994 39.0005 40.0062 33.1021 40.0096 33.0435V33.038V33.0305C39.9976 32.4693 39.7719 31.5642 39.5493 30.7503C39.544 29.3448 38.9839 28.3963 38.8493 28.1902C38.8483 27.935 38.8363 27.6854 38.8211 27.3761C38.7973 26.8781 38.767 26.2583 38.7657 25.2804C39.1738 24.5956 39.4777 23.8424 39.6763 23.2728C39.735 24.2061 39.875 25.5171 39.9498 26.1933L39.9532 26.2247C39.9456 26.2702 39.9443 26.3278 39.9401 26.3971C39.9357 26.5188 39.9281 26.6968 39.9184 26.9181C39.9098 27.2274 39.8869 27.8634 39.8738 28.6242C39.8533 29.6486 40.3004 30.735 40.5946 31.4514C40.691 31.6879 40.7757 31.8942 40.817 32.0319C40.8214 32.1383 40.8473 32.707 40.8593 33.1834C40.8637 33.3223 40.8669 33.5622 40.8669 33.5622L40.8723 33.5655C40.8778 33.6902 40.8843 33.8412 40.8961 34.0061C40.6498 34.3956 40.5771 34.5422 40.5381 34.7353C40.5 34.9069 40.4567 35.8457 40.5327 36.1441C40.5164 36.4035 40.4784 36.9581 40.4697 36.9971C40.4611 37.035 40.4556 37.7981 40.4794 38.0563C40.5175 38.46 40.6022 38.5263 40.7096 38.5404C40.817 38.5349 40.8637 38.4806 40.8669 38.4372C40.8593 38.396 40.8692 38.4069 40.8669 38.4372C40.8875 38.549 40.9298 38.7704 40.9928 38.9441C41.0709 39.1437 41.351 39.2218 41.4594 39.185C41.4487 39.324 41.5062 39.4271 41.6494 39.4488C41.9446 39.4324 42.0238 39.1688 42.0684 38.9571C42.0684 38.9571 42.1606 39.0277 42.3093 39.0808C42.471 39.0765 42.6142 38.8822 42.6597 38.6663C42.7911 38.4341 43.1287 36.5239 43.2089 36.2603C43.2632 36.474 43.6734 36.9049 43.8492 37.0243C44.0089 37.1197 44.1868 37.047 44.2921 36.8484C44.3289 36.6953 43.7385 35.7435 43.5985 35.1337ZM34.9305 40.8108C34.9305 40.8032 34.9652 40.3756 35.0097 39.8797L35.103 40.8075C35.1367 41.4554 35.0823 42.2661 35.0162 42.9901C34.9522 42.2661 34.8979 41.4554 34.9305 40.8108ZM35.1855 57.9614C35.2007 58.0233 35.1139 58.1915 35.027 58.3044C35.0238 58.3065 35.0204 58.3097 35.0152 58.3141C35.0118 58.3097 35.0086 58.3065 35.0063 58.3044C34.9185 58.1915 34.8328 58.0222 34.848 57.9614C35.0282 57.2473 34.8783 56.8458 34.8741 56.8348C34.7612 56.493 34.569 53.4869 34.7286 52.6924L34.7654 52.51C34.8707 51.9815 34.9684 51.5041 35.0152 50.9016C35.0651 51.5051 35.1605 51.9815 35.2681 52.51L35.3026 52.6924C35.4622 53.4869 35.2712 56.493 35.1605 56.8306C35.1552 56.8447 35.0053 57.2463 35.1855 57.9614Z" fill="white"/>
+            <path d="M69.5 68.9613C59 65.9594 51.0493 51.8887 51.0493 34.9672C51.0493 18.0455 59 3.97601 69.5 0.97197V0.866699C55.8029 3.63959 45.3678 17.8436 45.3678 34.9672C45.3678 52.0885 55.8016 66.2925 69.4989 69.0654L69.5 68.9613Z" fill="white" id="circle-1"/>
+            <path d="M0.5 0.970877C11 3.97601 18.9508 18.0455 18.9508 34.9662C18.9508 51.8887 10.999 65.9594 0.5 68.9613V69.0654C14.1973 66.2925 24.6311 52.0885 24.6311 34.9662C24.6311 17.8436 14.1973 3.63959 0.5 0.866699V0.970877Z" fill="white" id="circle-2"/>
+          </svg>
+            <!-- <img
               src="./assets/images/logos/logoIcon.svg"
               alt="Logo Icon"
               class="w-16 h-16"
-            />
+            /> -->
             <h4 class="h4 capitalize text-left font-bold leading-[1.2] my-4">
               With our 3T MRI scan, we ensure to provide the best.
             </h4>
@@ -466,14 +493,14 @@
               </div>
               <!-- Add Arrows -->
               <div class="btn-grp container mx-auto">
-                <div class="swiper-button-next rotate-180">
+                <div class="swiper-button-next rotate-180 animated-btn">
                   <img
                     src="./assets/images/icons/arrow.svg"
                     class="arrowSvg"
                     alt="Left Arrow"
                   />
                 </div>
-                <div class="swiper-button-prev">
+                <div class="swiper-button-prev animated-btn">
                   <img
                     src="./assets/images/icons/arrow.svg"
                     class="arrowSvg"
@@ -488,7 +515,7 @@
     </section>
 
     <!-- Testimonial -->
-    <section class="testimonial xl:my-[100px] my-[50px]">
+    <section class="testimonial section xl:my-[100px] my-[50px]">
       <img
         src="./assets/images/mriBanner.jpg"
         alt="MRI Banner Image"
@@ -678,14 +705,14 @@
               <div class="swiper-pagination !text-white"></div>
               <!-- Add Arrows -->
               <div class="btn-grp container mx-auto">
-                <div class="swiper-button-next rotate-180">
+                <div class="swiper-button-next animated-btn rotate-180">
                   <img
                     src="./assets/images/icons/arrow.svg"
                     class="arrowSvg"
                     alt="Left Arrow"
                   />
                 </div>
-                <div class="swiper-button-prev">
+                <div class="swiper-button-prev animated-btn">
                   <img
                     src="./assets/images/icons/arrow.svg"
                     class="arrowSvg"
@@ -700,11 +727,11 @@
     </section>
 
     <!-- Our Services -->
-    <section class="service md:mt-[100px] mt-[50px]">
+    <section class="service section md:mt-[100px] mt-[50px]">
       <div class="container mx-auto">
           <h3 class="h3 capitalize mb-14 text-center font-bold">
             Where we provide
-            <span class="animated-line">3T MRI service</span> in California
+            <span class="animated-span">3T MRI service</span> in California
           </h3>
         <div class="grid grid-cols-12 gap-6">
           <div class="md:col-span-6 col-span-12 card-cont-1">
@@ -727,9 +754,9 @@
           <div class="md:col-span-6 col-span-12 card-cont-2">
             <div class="card">
               <div class="card-body flex flex-col justify-center items-center">
-                <h3 class="h3 font-bold text-center">Culver City, CA</h3>
+                <h3 class="h3 font-bold text-center">Costa Mesa</h3>
                 <p class="mt-4 font-normal text-center w-3/4">
-                  9832 Venice Blvd., Culver City, CA 90232, United States
+                  3731 South Plaza Dr. Santa Ana Costa Mesa, CA, 92704, United States
                 </p>
                 <button class="btn btn-primary capitalize mt-12">
                   <img src="./assets/images/icons/map_cards.svg" alt="map cards" class="mr-3" />
@@ -737,26 +764,26 @@
                 </button>
               </div>
               <div class="img-container">
-                <img src="./assets/images/card.png" alt="MRi Machine" class="card-img"/>
+                <img src="./assets/images/card.png" alt="MRi Machine" class="card-img right"/>
               </div>
             </div>
           </div>
           <div class="col-span-12 fullService">
             <div class="card">
               <div class="card-body w-full">
-                <div class="flex justify-around md:flex-row flex-col-reverse">
-                  <img src="./assets/images/mriScan.png" alt="MRI scan" class="">
+                <div class="flex justify-around xl:flex-row flex-col-reverse">
+                  <img src="./assets/images/mriScan.png" alt="MRI scan">
                   <div class="right flex flex-col pb-10">
-                    <h3 class="h3 font-bold text-left capitalize leading-[1.3] lg:mb-4 mb-0">With our <span class="italic">3T MRI scan</span>, we <span class="2xl:block inline-block"></span> ensure to provide the best.</h3>
+                    <h3 class="h3 font-bold text-left capitalize leading-[1.1] xl:leading-[1.3] lg:mb-4 mb-0">With our <span class="italic">3T MRI scan</span>, we <span class="2xl:block inline-block"></span> ensure to provide the best.</h3>
                     <h5 class="h5 font-normal text-left capitalize 2xl:mt-0 mt-2">Timely and accurate diagnosis can change a patient's life.</h5>
-                    <div class="btn-grp flex-col 2xl:flex-row flex lg:mt-12 mt-6 justify-start 2xl:gap-9 gap-3 items-start 2xl:items-center ">
+                    <div class="btn-grp flex-col lg:flex-row flex lg:mt-12 mt-6 justify-start lg:gap-9 gap-3 items-start lg:items-center ">
                       <div class="contact-list">
                         <p class="nav-item-text text-[16px] capitalize">
                           request an appointment
                         </p>
                         <a
                           href="callto:(877) 674-8888"
-                          class="no-underline flex items-center font-bold xl:text-[24px] lg:text-[24px] text-[20px]"
+                          class="no-underline flex items-center font-bold 2xl:text-[24px] lg:text-[22px] text-[20px]"
                         >
                           <img
                             class="icon mr-3 call-icon"
@@ -765,8 +792,8 @@
                           />
                           <span class="animated-underline-dark">(877) 674-8888</span>
                         </a>
-                      </div>
-                      <h5 class="h5 w-2/4 text-center 2xl:w-fit">or</h5>
+                      </div> 
+                      <h5 class="h5 w-2/4 text-center md:w-fit">or</h5>
                       <button class="btn-primary btn capitalize p">
                         <img
                           src="./assets/images/icons/calendar.svg"
@@ -786,7 +813,7 @@
     </section>
     
     <!-- Form -->
-     <section class="form-container py-[100px] flex items-center justify-center w-full h-full">
+     <section class="form-container section xl:py-[100px] py-[50px] flex items-center justify-center w-full h-full">
       <div class="container mx-auto flex justify-center">
         <div class="card bg-white border border-solid gap-8 border-[#AEC4E5] rounded-[32px] md:px-16 px-8 py-10 max-w-[1000px]">
           <div class="header flex flex-col items-center justify-center">
@@ -813,13 +840,13 @@
      </section>
 
      <!-- Footer -->
-      <footer class="footer md:pb-0 pb-5 py-20">
+      <footer class="footer pt-20 lg:pb-20 pb-10">
         <div class="container mx-auto">
           <div class="backToTop">
-            <a href="#" class="btn btn-light rotate-90">
+            <a href="#" class="btn btn-light animated-btn rotate-90">
               <img src="./assets/images/icons/arrow.svg" alt="arrow">
             </a>
-            <p class="p capitalize mt-10">Back to top</p>
+            <p class="p capitalize xl:mt-10 mt-6">Back to top</p>
           </div>
           <div class="xl:px-36 px:6">
             <div class="top flex justify-between items-center">

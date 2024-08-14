@@ -15,7 +15,7 @@ function countvalue(isCount) {
         start = 0;
       }
       var end = endVal;
-      var speed = 10;
+      var speed = 40;
 
       setInterval(function () {
         start++;
@@ -43,6 +43,42 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".number").forEach((client) => {
   observer.observe(client);
+});
+
+// animated lines
+const animatedText = document.querySelectorAll(".animated-span");
+
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animated-line");
+      } else {
+        entry.target.classList.remove("animated-line");
+      }
+    });
+  },
+  {
+    threshold: 1, // Adjust as needed, 0.5 means the element is considered in the viewport when 50% visible
+  }
+);
+
+animatedText.forEach((client) => {
+  observer2.observe(client);
+});
+
+// animated sections
+const sections = document.querySelectorAll(".section");
+const observer_opacity = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+sections.forEach((client) => {
+  observer_opacity.observe(client);
 });
 
 // nav on scroll background
@@ -97,6 +133,10 @@ const swiper = new Swiper(".card-swiper", {
       slidesPerView: 1.5,
       spaceBetween: 20,
     },
+    1600: {
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+    },
   },
 });
 
@@ -143,7 +183,7 @@ btn1.forEach((btn) => {
   btn.append(span2);
 });
 
-let btnLight = document.querySelectorAll(".btn-light");
+let btnLight = document.querySelectorAll(".animated-btn");
 
 btnLight.forEach((btn) => {
   let image = btn.querySelector("img");
@@ -153,23 +193,30 @@ btnLight.forEach((btn) => {
 });
 
 // Back to top button
-document.querySelector(".backToTop").addEventListener("click", function () {
-  // The total duration of the scroll in milliseconds
-  const duration = 700; // Change this value to control the speed
-  // Get the current scroll position
+
+const backToTopButton = document.querySelector(".backToTop");
+
+function smoothScrollToTop(duration) {
   const start = window.scrollY;
-  // Get the start time
-  let startTime = null;
-  // Animation function
-  function scrollStep(timestamp) {
-    if (!startTime) startTime = timestamp;
-    const progress = timestamp - startTime;
-    const scrollDistance = Math.max(start - (progress / duration) * start, 0);
-    window.scrollTo(0, scrollDistance);
-    if (scrollDistance > 0) {
-      window.requestAnimationFrame(scrollStep);
+  const end = 0;
+  const startTime = performance.now();
+
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+
+  const animateScroll = () => {
+    const now = performance.now();
+    const progress = (now - startTime) / duration;
+    const easedProgress = easeInOutCubic(progress);
+    const position = start + (end - start) * easedProgress;
+    window.scrollTo(0, position);
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
     }
-  }
-  // Start the animation
-  window.requestAnimationFrame(scrollStep);
+  };
+  animateScroll();
+}
+
+backToTopButton.addEventListener("click", () => {
+  smoothScrollToTop(1000); // Adjust duration in milliseconds
 });
